@@ -6,6 +6,9 @@ RUN apt-get install -y git-core gnupg flex bison build-essential zip curl zlib1g
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /bin/repo
 RUN chmod +x /bin/repo
 
+
 # Get env ready for fetching source code of kernel
-RUN git config --global user.email "you@example.com" && \
-    git config --global user.name "Your Name"
+RUN git config --global user.email "without_kslr" && \
+    git config --global user.name "pix2"
+#ENTRYPOINT = ['tail', '-f', '/dev/null']
+CMD ["tail", "-f", "/dev/null"]
